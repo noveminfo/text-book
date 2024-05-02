@@ -108,8 +108,8 @@ Prior to your first deployment, you'll need to do a few things:
 -   Create two apps on Fly, one for staging and one for production:
 
     ```sh
-    fly apps create supa-fly-stack-template
-    fly apps create supa-fly-stack-template-staging  # ** not mandatory if you don't want a staging environnement **
+    fly apps create text-book-65d9
+    fly apps create text-book-65d9-staging  # ** not mandatory if you don't want a staging environnement **
     ```
 
     > **Note:** For production app, make sure this name matches the `app` set in your `fly.toml` file. Otherwise, you will not be able to deploy.
@@ -130,7 +130,7 @@ Prior to your first deployment, you'll need to do a few things:
 
 -   Add a `SESSION_SECRET`, `SUPABASE_URL`, `SUPABASE_SERVICE_ROLE`,`SUPABASE_ANON_PUBLIC`, `SERVER_URL` and `DATABASE_URL` to your fly app secrets
 
-    > **Note:** To find your `SERVER_URL`, go to [your fly.io dashboard](https://fly.io/apps/supa-fly-stack-template-3a36)
+    > **Note:** To find your `SERVER_URL`, go to [your fly.io dashboard](https://fly.io/apps/text-book-65d9-3a36)
 
     To do this you can run the following commands:
 
@@ -144,12 +144,12 @@ Prior to your first deployment, you'll need to do a few things:
     fly secrets set SERVER_URL="https://{YOUR_STAGING_SERVEUR_URL}"
 
     # staging (specify --app name) ** not mandatory if you don't want a staging environnement **
-    fly secrets set SESSION_SECRET=$(openssl rand -hex 32) --app supa-fly-stack-template-staging
-    fly secrets set SUPABASE_URL="https://{YOUR_STAGING_INSTANCE_NAME}.supabase.co" --app supa-fly-stack-template-staging
-    fly secrets set SUPABASE_SERVICE_ROLE="{STAGING_SUPABASE_SERVICE_ROLE}" --app supa-fly-stack-template-staging
-    fly secrets set SUPABASE_ANON_PUBLIC="{STAGING_SUPABASE_ANON_PUBLIC}" --app supa-fly-stack-template-staging
-    fly secrets set DATABASE_URL="postgres://postgres:{STAGING_POSTGRES_PASSWORD}@db.{STAGING_YOUR_INSTANCE_NAME}.supabase.co:5432/postgres" --app supa-fly-stack-template-staging
-    fly secrets set SERVER_URL="https://{YOUR_STAGING_SERVEUR_URL}" --app supa-fly-stack-template-staging
+    fly secrets set SESSION_SECRET=$(openssl rand -hex 32) --app text-book-65d9-staging
+    fly secrets set SUPABASE_URL="https://{YOUR_STAGING_INSTANCE_NAME}.supabase.co" --app text-book-65d9-staging
+    fly secrets set SUPABASE_SERVICE_ROLE="{STAGING_SUPABASE_SERVICE_ROLE}" --app text-book-65d9-staging
+    fly secrets set SUPABASE_ANON_PUBLIC="{STAGING_SUPABASE_ANON_PUBLIC}" --app text-book-65d9-staging
+    fly secrets set DATABASE_URL="postgres://postgres:{STAGING_POSTGRES_PASSWORD}@db.{STAGING_YOUR_INSTANCE_NAME}.supabase.co:5432/postgres" --app text-book-65d9-staging
+    fly secrets set SERVER_URL="https://{YOUR_STAGING_SERVEUR_URL}" --app text-book-65d9-staging
 
     ```
 

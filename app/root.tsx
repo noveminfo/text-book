@@ -22,7 +22,11 @@ import tailwindStylesheetUrl from "./styles/tailwind.css";
 import { getBrowserEnv } from "./utils/env";
 
 export const links: LinksFunction = () => [
-	{ rel: "stylesheet preload prefetch", href: tailwindStylesheetUrl, as: "style" },
+	{
+		rel: "stylesheet preload prefetch",
+		href: tailwindStylesheetUrl,
+		as: "style",
+	},
 ];
 
 export const meta: MetaFunction = () => [

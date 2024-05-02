@@ -57,5 +57,3 @@ export function ErrorBoundary() {
 
 	return <div>{JSON.stringify(error, null, 2)}</div>;
 }
-
-

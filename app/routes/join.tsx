@@ -80,7 +80,6 @@ export async function action({ request }: ActionFunctionArgs) {
 	});
 }
 
-
 export const meta: MetaFunction<typeof loader> = ({ data }) => [
 	{
 		title: data?.title,

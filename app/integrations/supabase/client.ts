@@ -17,7 +17,7 @@ function getSupabaseClient(supabaseKey: string, accessToken?: string) {
 						Authorization: `Bearer ${accessToken}`,
 					},
 				},
-		  }
+			}
 		: {};
 
 	return createClient(SUPABASE_URL, supabaseKey, {

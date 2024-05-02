@@ -120,7 +120,7 @@ export default function LoginCallback() {
 				formData.append("refreshToken", refreshToken);
 				formData.append("redirectTo", redirectTo);
 
-				fetcher.submit(formData, { method: "post", });
+				fetcher.submit(formData, { method: "post" });
 			}
 		});
 
