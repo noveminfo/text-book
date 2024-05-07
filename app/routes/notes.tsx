@@ -2,6 +2,7 @@ import type { LoaderFunctionArgs } from "@remix-run/node";
 import { json } from "@remix-run/node";
 import { useLoaderData, Outlet, Link, NavLink } from "@remix-run/react";
 
+import { Button } from "~/components/ui/button";
 import { LogoutButton, requireAuthSession } from "~/modules/auth";
 import { getNotes } from "~/modules/note";
 import { notFound } from "~/utils/http.server";
@@ -33,9 +34,11 @@ export default function NotesPage() {
 
 			<main className="flex h-full bg-white">
 				<div className="h-full w-80 border-r bg-gray-50">
-					<Link to="new" className="block p-4 text-xl text-blue-500">
-						+ New Note
-					</Link>
+					<Button variant="ghost" className="m-4">
+						<Link to="new" className="block text-xl text-blue-500">
+							+ New Note
+						</Link>
+					</Button>
 
 					<hr />
 

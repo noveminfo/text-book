@@ -59,12 +59,7 @@ export default function NewNotePage() {
 		<Form
 			ref={zo.ref}
 			method="post"
-			style={{
-				display: "flex",
-				flexDirection: "column",
-				gap: 8,
-				width: "100%",
-			}}
+			className="flex w-full flex-col gap-[8px]"
 		>
 			<div>
 				<label className="flex w-full flex-col gap-1">
